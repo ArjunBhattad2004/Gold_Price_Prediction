@@ -128,14 +128,14 @@ If you want to import the pre-built Docker image from DockerHub (instead of buil
 #### Step 1: Pull the Docker Image from DockerHub
 Open a terminal and run the following command to pull the Docker image from DockerHub (replace `username` with the actual DockerHub username where the image is hosted):
 ```bash
-docker pull username/gold-price-prediction:latest
+docker pull arjunbhattad/gold-price-prediction:latest
 ```
 This will download the pre-built Docker image to your local machine.
 
 #### Step 2: Run the Docker Container
 After pulling the image, you can run the Docker container with the following command:
 ```bash
-docker run -p 8888:8888 username/gold-price-prediction:latest
+docker run -p 8888:8888 arjunbhattad/gold-price-prediction:latest
 ```
 - `-p 8888:8888`: This maps port `8888` on your host machine to port `8888` inside the Docker container, where Jupyter Lab will be accessible.
 
