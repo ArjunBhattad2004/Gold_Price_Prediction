@@ -1,7 +1,7 @@
 # DE_Project
-# Gold Price Prediction Using Machine Learning
+## Gold Price Prediction Using Machine Learning
 
-## Overview
+### Overview
 
 The **Gold Price Prediction** project focuses on forecasting gold prices using machine learning techniques by leveraging two different datasets: one sourced from Kaggle and another from financial datasets, such as the SPDR Gold Trust (GLD) Exchange Traded Fund. This integrated approach combines strengths from both projects to build a robust model capable of predicting future gold prices based on various economic and market indicators.
 
@@ -9,7 +9,7 @@ Gold plays a significant role in the global financial system. Predicting its pri
 
 ---
 
-## Key Features
+### Key Features
 
 1. **Comprehensive Data Integration**:
    - **Kaggle Dataset**: Includes historical gold prices, economic indicators, and market sentiment.
@@ -42,7 +42,7 @@ Gold plays a significant role in the global financial system. Predicting its pri
 
 ---
 
-## Workflow
+### Workflow
 
 1. Data Collection and Integration
 2. Data Cleaning and Preprocessing
@@ -55,7 +55,7 @@ Gold plays a significant role in the global financial system. Predicting its pri
 
 ---
 
-## Installation
+### Installation
 
 To run this project, you will need:
 
@@ -71,7 +71,7 @@ To run this project, you will need:
 
 ---
 
-## How to Run
+### How to Run
 
 1. **Google Colab**:
    - Open the notebook file `Gold_Price_Prediction.ipynb` in [Google Colab](https://colab.research.google.com/).
@@ -87,31 +87,90 @@ To run this project, you will need:
      jupyter notebook Gold_Price_Prediction.ipynb
      ```
 
+3. **Docker Setup**:
+   - You can also run the project in a Docker container for a consistent environment. Follow the steps below to set up Docker for the Gold Price Prediction project.
+
 ---
 
-## Dataset and Inputs
+### Docker Image Implementation
+
+To run this project in a Docker container, follow these steps:
+
+#### Step 1: Build the Docker Image
+1. Make sure your project directory contains a `Dockerfile` (as described in the previous instructions).
+2. Open a terminal and navigate to the project directory.
+3. Build the Docker image using the following command:
+   ```bash
+   docker build -t gold-price-prediction .
+   ```
+
+#### Step 2: Run the Docker Container
+Once the image is built, you can run the container with the following command:
+```bash
+docker run -p 8888:8888 gold-price-prediction
+```
+- `-p 8888:8888`: This maps port `8888` on your host machine to port `8888` inside the Docker container, which is the default port for Jupyter Lab.
+- This will start the container and launch **Jupyter Lab**.
+
+#### Step 3: Access the Jupyter Notebook
+Once the container is running, you can access the Jupyter Lab interface from your browser by visiting:
+```bash
+http://localhost:8888
+```
+You may need to enter the **token** provided in the terminal output to log in.
+
+---
+
+### Importing the Docker Image from DockerHub
+
+If you want to import the pre-built Docker image from DockerHub (instead of building it yourself), follow these steps:
+
+#### Step 1: Pull the Docker Image from DockerHub
+Open a terminal and run the following command to pull the Docker image from DockerHub (replace `username` with the actual DockerHub username where the image is hosted):
+```bash
+docker pull username/gold-price-prediction:latest
+```
+This will download the pre-built Docker image to your local machine.
+
+#### Step 2: Run the Docker Container
+After pulling the image, you can run the Docker container with the following command:
+```bash
+docker run -p 8888:8888 username/gold-price-prediction:latest
+```
+- `-p 8888:8888`: This maps port `8888` on your host machine to port `8888` inside the Docker container, where Jupyter Lab will be accessible.
+
+#### Step 3: Access the Jupyter Notebook
+Once the container is running, open your browser and go to:
+```bash
+http://localhost:8888
+```
+You can then use Jupyter Lab to interact with the project.
+
+---
+
+### Dataset and Inputs
 
 - **Kaggle Dataset**: Provides historical gold price data and economic indicators.
 - **Final_USO Dataset**:
   - Covers 1,718 rows and 80 columns, including features like oil prices, S&P 500 index, bond rates, exchange rates, and precious metal prices.
-  - Target Variable: **Adjusted Close Price** of the GLD ETF, which accounts for dividends, stock splits, and offerings.
+  - **Target Variable**: Adjusted Close Price of the GLD ETF, which accounts for dividends, stock splits, and offerings.
 
 ---
 
-## Evaluation Metrics
+### Evaluation Metrics
 
 - **Root Mean Square Error (RMSE)**: Measures the standard deviation of residuals (prediction errors).
 - **R² Score**: Indicates the proportion of variance explained by the model.
 
 ---
 
-## Conclusion
+### Conclusion
 
 The integrated project offers a comprehensive framework for predicting gold prices using machine learning. By combining insights from Kaggle and Final_USO datasets, this project leverages a wide range of features, advanced algorithms, and ensemble modeling to enhance prediction accuracy.
 
 ---
 
-## Acknowledgments
+### Acknowledgments
 
 This project utilizes open-source tools and datasets. Special thanks to:
 - Kaggle and Yahoo Finance for datasets.
