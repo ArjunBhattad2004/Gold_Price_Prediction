@@ -1,6 +1,9 @@
 # DE_Project
 ## Gold Price Prediction Using Machine Learning
+### Links:
+-**Project Website**: https://goldpricepredictiondeproject.netlify.app/
 
+-**DockerHub Repository**: https://hub.docker.com/repository/docker/arjunbhattad/gold-price-prediction/general
 ### Overview
 
 The **Gold Price Prediction** project focuses on forecasting gold prices using machine learning techniques by leveraging two different datasets: one sourced from Kaggle and another from financial datasets, such as the SPDR Gold Trust (GLD) Exchange Traded Fund. This integrated approach combines strengths from both projects to build a robust model capable of predicting future gold prices based on various economic and market indicators.
