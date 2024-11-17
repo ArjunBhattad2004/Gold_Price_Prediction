@@ -89,6 +89,7 @@ To run this project, you will need:
 
 3. **Docker Setup**:
    - You can also run the project in a Docker container for a consistent environment. Follow the steps below to set up Docker for the Gold Price Prediction project.
+   - [Dockerhub Repository](https://hub.docker.com/repository/docker/arjunbhattad/gold-price-prediction/general)
 
 ---
 
